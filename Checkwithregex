@@ -1,0 +1,21 @@
+ 
+ static void Main(string[] args)
+        {
+         
+ 
+     string palindrome = Regex.Replace("Too hot to hoot.", @"[^0-9a-zA-Z]+", "").ToLower();
+            string newstring = "";
+
+            for (int i = palindrome.Length - 1; i >= 0; i--)
+            {
+                newstring += palindrome[i];
+            }
+
+
+            if (newstring.Equals(palindrome))
+            {
+                Console.WriteLine("sentence is a plaindrome");
+                Console.ReadKey();
+              return;
+            }
+}
